@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Link } from 'react-router-dom';
 import {Button} from 'antd-mobile';
-import{ ReactDOM } from 'react-dom';
+
 
 const clickToPush = (tt,address) =>{
   tt.props.history.push(address);
@@ -44,6 +44,12 @@ class App extends Component {
       style={{height:'100%',width:'100%',backgroundColor:'blue',color:'white'}} 
       activeStyle = {{backgroundColor:'#FBC248'}}
       onClick={()=>{clickToPush(this,'states')}}>跳转到states
+    </Button>
+
+      <Button 
+      style={{height:'100%',width:'100%',backgroundColor:'#aaafff',color:'white'}} 
+      activeStyle = {{backgroundColor:'#FBC248'}}
+      onClick={()=>{clickToPush(this,'jumpAnimate')}}>跳转到页面动画
     </Button>
 
 {/* 点击link跳转 */}

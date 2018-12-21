@@ -5,11 +5,15 @@
   "dependencies": {
     "antd-mobile": "^2.2.6",
     "babel-jest": "^23.6.0",
+    "rc-queue-anim": "^1.6.10",
     "react": "^16.7.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-animated-router": "^0.1.11",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-transition-group": "^2.5.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -93,7 +93,14 @@ const comment = {
 };
 
 export default class Props extends Component {
- 
+  
+  componentWillMount() {
+    // 这是防止页面被拖拽
+    document.body.addEventListener('touchmove', (ev) => {
+      ev.preventDefault();
+    });
+  }
+
     render() {
       return (
         <div>

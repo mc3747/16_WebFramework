@@ -10,16 +10,25 @@ class WebSite extends React.Component {
         site: "https://www.runoob.com"
       }
     }
+
+    static defaultProps = { 
+      name: "✅菜鸟教程",
+      site: "✅https://www.runoob.com"
+  }
   render() {
     return (
       <div>
         <Name name={this.state.name} />
         <Link site={this.state.site} />
+
+        <Name name ={this.props.name} />
+        <Link site={this.props.site} /> 
       </div>
     );
   }
 }
- 
+
+//  子组件
 class Name extends React.Component {
   render() {
     return (
@@ -76,14 +85,15 @@ class Clock extends React.Component {
   }
 }
 
-
+/*主组件返回*/
 export default class States extends Component {
   
     render() {
       return (
         <div>
            <div style={{myStyle,fontSize: '40px',color:'green'}}> {[3,4,6]} </div>
-          <WebSite />
+           {/* props才能在组件里边写参数，state不行 */}
+          <WebSite name='滚'/>
           <Clock />
         </div>
          
