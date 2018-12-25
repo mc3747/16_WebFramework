@@ -32,24 +32,42 @@ class App extends Component {
     <Button 
       style={{height:'100%',width:'100%',backgroundColor:'red',color:'white'}} 
       activeStyle = {{backgroundColor:'#FBC248'}}
-      onClick={()=>{clickToPush(this,'selfDefinedComponent')}}>跳转到组件
+      onClick={()=>{clickToPush(this,'selfDefinedComponent')}}>1，跳转到组件
     </Button>
     <Button 
       style={{height:'100%',width:'100%',backgroundColor:'green',color:'white'}} 
       activeStyle = {{backgroundColor:'#FBC248'}}
-      onClick={()=>{clickToPush(this,'props')}}>跳转到props
+      onClick={()=>{clickToPush(this,'props')}}>2，跳转到props
     </Button>
 
     <Button 
       style={{height:'100%',width:'100%',backgroundColor:'blue',color:'white'}} 
       activeStyle = {{backgroundColor:'#FBC248'}}
-      onClick={()=>{clickToPush(this,'states')}}>跳转到states
+      onClick={()=>{clickToPush(this,'states')}}>3，跳转到states
     </Button>
 
       <Button 
       style={{height:'100%',width:'100%',backgroundColor:'#aaafff',color:'white'}} 
       activeStyle = {{backgroundColor:'#FBC248'}}
-      onClick={()=>{clickToPush(this,'jumpAnimate')}}>跳转到页面动画
+      onClick={()=>{clickToPush(this,'jumpAnimate')}}>4，跳转到页面动画
+    </Button>
+
+      <Button 
+      style={{height:'100%',width:'100%',backgroundColor:'#aabb44',color:'white'}} 
+      activeStyle = {{backgroundColor:'#FBC248'}}
+      onClick={()=>{clickToPush(this,'jumpEvent')}}>5，跳转到事件
+    </Button>
+
+     <Button 
+      style={{height:'100%',width:'100%',backgroundColor:'#aa2244',color:'white'}} 
+      activeStyle = {{backgroundColor:'#FBC248'}}
+      onClick={()=>{clickToPush(this,'jumpRender')}}>6，跳转到渲染
+    </Button>
+
+     <Button 
+      style={{height:'100%',width:'100%',backgroundColor:'#ddee22',color:'white'}} 
+      activeStyle = {{backgroundColor:'#FBC248'}}
+      onClick={()=>{clickToPush(this,'jumpList')}}>7，跳转到列表
     </Button>
 
 {/* 点击link跳转 */}

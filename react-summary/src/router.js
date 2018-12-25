@@ -12,11 +12,16 @@ import './Animate.css';
 // 动画引入3（显示动画）
 import QueueAnim from 'rc-queue-anim';
 
+// 跳转路由
 import App from './App';
 import SelfDefinedComponent from './practices/1_selfDefinedComponent';
 import Props from './practices/2_props';
 import States from './practices/3_states';
 import JumpAnimate from './practices/4_jumpAnimate';
+import JumpEvent from './practices/5_jumpEvent';
+import JumpRender from './practices/6_jumpRender';
+import JumpList from './practices/7_jumpList';
+
 import createBrowserHistory from "history/createBrowserHistory";
 
 const history = createBrowserHistory();
@@ -73,11 +78,13 @@ class Routers extends Component {
             <QueueAnim >
           
                         <Route path="/"  exact component={App} key='demo1'/>
-                        <Route path="/selfDefinedComponent"  exact component={SelfDefinedComponent} key='demo1'/>
-                        <Route path="/props"  exact component={Props} key='demo1'/>
-                        <Route path="/states"  exact component={States} key='demo1'/> 
-                        <Route path="/jumpAnimate"  exact component={JumpAnimate} key='demo1'/>   */}
-
+                        <Route path="/selfDefinedComponent"  exact component={SelfDefinedComponent} key='demo2'/>
+                        <Route path="/props"  exact component={Props} key='demo3'/>
+                        <Route path="/states"  exact component={States} key='demo4'/> 
+                        <Route path="/jumpAnimate"  exact component={JumpAnimate} key='demo5'/>   
+                        <Route path="/jumpEvent"  exact component={JumpEvent} key='demo6'/>   
+                        <Route path="/jumpRender"  exact component={JumpRender} key='demo7'/>
+                        <Route path="/jumpList"  exact component={JumpList} key='demo8'/>      
               </QueueAnim>   
             {/* </AnimatedRouter>      
             </Switch> */}
