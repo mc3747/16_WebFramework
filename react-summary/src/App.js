@@ -49,41 +49,55 @@ class App extends Component {
                             activeStyle={{ backgroundColor: '#FBC248' }}
                             onClick={() => { clickToPush(this, 'selfDefinedComponent') }}>1，跳转到组件
     </Button>
+                        <br />
                         <Button
                             style={buttonStyle}
                             activeStyle={{ backgroundColor: '#FBC248' }}
                             onClick={() => { clickToPush(this, 'props') }}>2，跳转到props
     </Button>
-
+                        <br />
                         <Button
                             style={buttonStyle}
                             activeStyle={{ backgroundColor: '#FBC248' }}
                             onClick={() => { clickToPush(this, 'states') }}>3，跳转到states
     </Button>
-
+                        <br />
                         <Button
                             style={buttonStyle}
                             activeStyle={{ backgroundColor: '#FBC248' }}
                             onClick={() => { clickToPush(this, 'jumpAnimate') }}>4，跳转到页面动画
     </Button>
-
+                        <br />
                         <Button
                             style={buttonStyle}
                             activeStyle={{ backgroundColor: '#FBC248' }}
                             onClick={() => { clickToPush(this, 'jumpEvent') }}>5，跳转到事件
     </Button>
-
+                        <br />
                         <Button
                             style={buttonStyle}
                             activeStyle={{ backgroundColor: '#FBC248' }}
                             onClick={() => { clickToPush(this, 'jumpRender') }}>6，跳转到渲染
     </Button>
-
+                        <br />
                         <Button
                             style={buttonStyle}
                             activeStyle={{ backgroundColor: '#FBC248' }}
                             onClick={() => { clickToPush(this, 'jumpList') }}>7，跳转到列表
     </Button>
+                        <br />
+                        <Button
+                            style={buttonStyle}
+                            activeStyle={{ backgroundColor: '#FBC248' }}
+                            onClick={() => { clickToPush(this, 'freshControl') }}>8，跳转到刷新控件
+    </Button>
+                        <br />
+                        <Button
+                            style={buttonStyle}
+                            activeStyle={{ backgroundColor: '#FBC248' }}
+                            onClick={() => { clickToPush(this, 'freshAndMore') }}>第三方刷新控件
+    </Button>
+                        <br />
                     </div>
                     {/* 2，集锦部分 */}
                     <div style={sectionTwoStyle}>

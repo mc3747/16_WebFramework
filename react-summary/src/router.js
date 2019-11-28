@@ -23,8 +23,12 @@ import AnimateSummary from './practices/animation/index';
 import JumpEvent from './practices/5_jumpEvent';
 import JumpRender from './practices/6_jumpRender';
 import JumpList from './practices/7_jumpList';
+import FreshControl from './practices/8_freshControl';
+import FreshAndMore from "./practices/9_freshAndMore";
+
 import PackageController from './package/packageController';
 import createBrowserHistory from "history/createBrowserHistory";
+
 
 const history = createBrowserHistory();
 let styles = {
@@ -87,6 +91,8 @@ class Routers extends Component {
                     <Route path="/jumpEvent" exact component={JumpEvent} key='demo6' />
                     <Route path="/jumpRender" exact component={JumpRender} key='demo7' />
                     <Route path="/jumpList" exact component={JumpList} key='demo8' />
+                    <Route path="/freshControl" exact component={FreshControl} key='demo9' />
+                    <Route path="/freshAndMore" exact component={FreshAndMore} key='demo10' />
                     <Route path="/packageController" exact component={PackageController} key='package1' />
 
                 </QueueAnim>
