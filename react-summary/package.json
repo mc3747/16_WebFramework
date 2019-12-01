@@ -3,25 +3,25 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "animated": "^0.2.1",
         "antd-mobile": "^2.2.6",
         "babel-jest": "^23.6.0",
+        "babel-polyfill": "^6.26.0",
+        "gsap": "^1.20.3",
         "rc-queue-anim": "^1.6.10",
         "react": "^16.7.0",
         "react-addons-css-transition-group": "^15.6.2",
         "react-animated-router": "^0.1.11",
         "react-dom": "^16.7.0",
+        "react-gsap-enhancer": "^0.3.0",
+        "react-hot-loader": "^4.12.18",
+        "react-motion": "^0.5.2",
+        "react-pullload": "^1.2.0",
         "react-router": "^4.3.1",
         "react-router-dom": "^4.3.1",
         "react-scripts": "2.1.1",
-        "react-transition-group": "^2.5.2",
-        "animated": "^0.2.1",
-        "react-motion": "^0.5.2",
-        "gsap": "^1.20.3",
-        "react-gsap-enhancer": "^0.3.0",
-        "react-hot-loader": "^4.3.5",
-        "babel-polyfill": "^6.26.0",
-        "less": "^3.8.1",
-        "less-loader": "^4.1.0"
+        "react-touch-loader": "^1.1.4",
+        "react-transition-group": "^2.5.2"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -37,5 +37,9 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "devDependencies": {
+        "less": "^3.10.3",
+        "less-loader": "^5.0.0"
+    }
 }
