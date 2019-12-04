@@ -12,7 +12,7 @@ ReactDOM.render(<Routers />, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 // 3,本文件渲染
-    // 渲染helloWorld
+// 渲染helloWorld
 // ReactDOM.render(
 //     <h1>Hello, world!</h1>,
 //     document.getElementById('root')

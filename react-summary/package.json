@@ -4,7 +4,8 @@
     "private": true,
     "dependencies": {
         "animated": "^0.2.1",
-        "antd-mobile": "^2.2.6",
+        "antd-mobile": "^2.3.0",
+        "axios": "^0.19.0",
         "babel-jest": "^23.6.0",
         "babel-polyfill": "^6.26.0",
         "gsap": "^1.20.3",

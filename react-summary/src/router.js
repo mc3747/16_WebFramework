@@ -15,6 +15,11 @@ import QueueAnim from 'rc-queue-anim';
 
 // 跳转路由
 import App from './App';
+import Package from './package/package';
+import Summary from './summary/summary';
+import Tool from './tool/tool';
+import Base from './base/base';
+
 import SelfDefinedComponent from './practices/1_selfDefinedComponent';
 import Props from './practices/2_props';
 import States from './practices/3_states';
@@ -26,7 +31,7 @@ import JumpList from './practices/7_jumpList';
 import FreshControl from './practices/8_freshControl';
 import FreshAndMore from "./practices/9_freshAndMore";
 
-import PackageController from './package/packageController';
+import PackageController from './package/packageList/packageController';
 import createBrowserHistory from "history/createBrowserHistory";
 
 
@@ -95,6 +100,10 @@ class Routers extends Component {
                     <Route path="/freshAndMore" exact component={FreshAndMore} key='demo10' />
                     <Route path="/packageController" exact component={PackageController} key='package1' />
 
+                    <Route path="/package" exact component={Package} key='package' />
+                    <Route path="/base" exact component={Base} key='base' />
+                    <Route path="/tool" exact component={Tool} key='tool' />
+                    <Route path="/summary" exact component={Summary} key='summary' />
                 </QueueAnim>
                 {/* </AnimatedRouter>      
             </Switch> */}

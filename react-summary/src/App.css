@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -29,4 +29,29 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+
+div.am-tab-bar-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 40px;
+  background-color: aquamarine;
+}
+
+.am-tab-bar::-webkit-scrollbar {
+  display: none;
+}
+#tab-bar.demo {
+  display: flex;
+  flex-direction: column;
+}
+#tab-bar .demoName {
+  height: 40px;
+}
+#tab-bar .demo-preview-item .am-tab-bar {
+  background-color: white;
 }
