@@ -31,7 +31,8 @@ import JumpList from './practices/7_jumpList';
 import FreshControl from './practices/8_freshControl';
 import FreshAndMore from "./practices/9_freshAndMore";
 
-import PackageController from './package/packageList/packageController';
+import PackageSectionListVC from './package/packageList/packageSectionListVC';
+import PackageNormalListVC from './package/packageList/packageNormalListVC';
 import createBrowserHistory from "history/createBrowserHistory";
 
 
@@ -98,7 +99,8 @@ class Routers extends Component {
                     <Route path="/jumpList" exact component={JumpList} key='demo8' />
                     <Route path="/freshControl" exact component={FreshControl} key='demo9' />
                     <Route path="/freshAndMore" exact component={FreshAndMore} key='demo10' />
-                    <Route path="/packageController" exact component={PackageController} key='package1' />
+                    <Route path="/packageSectionListVC" exact component={PackageSectionListVC} key='package1' />
+                    <Route path="/packageNormalListVC" exact component={PackageNormalListVC} key='package2' />
 
                     <Route path="/package" exact component={Package} key='package' />
                     <Route path="/base" exact component={Base} key='base' />
