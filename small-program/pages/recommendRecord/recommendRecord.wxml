@@ -1,0 +1,74 @@
+<view class="container">
+<!-- 顶部筛选 -->
+    <view class="filter-wrapper">
+        <view class="filter" bind:tap="onFilterClick">
+        {{selectTitle}}
+        <view class="triangle-up" animation="{{animationData}}"></view> 
+        </view>
+    </view>
+
+<!-- 下拉需要显示的列表 -->
+    <view class="select_box" wx:if="{{select}}">
+        <block  wx:for="{{titleArray}}" wx:key="unique">
+            <view class="select_item {{selectTitle==item.stateDesc ? 'select_item_choose':''}}" bindtap="onSelectedClick" data-desc="{{item.stateDesc}}" data-state="{{item.state}}">{{item.stateDesc}}
+                <image  class="select_icon"  style="opacity:{{selectTitle==item.stateDesc ?1:0}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAAf9JREFUaN7tl7Fr+kAUx9/pz6FDoFPAQPdMBe9lcKtgl9BQMP0HSrfg1F1swaVb6eZg91bBTUQoSidRuATSpdBVCaTdXCodrkOIy49ipdHE9j7bC3khn2/uyD0AgUAgEAj+LCTuF4gKpEiRZjJAgAC5uYEudKE7nzOZyUw+P/+qLxX3i0cmXoc61O/ugquWBTrooJvmsv6tDWAhboABxv09WGCBZZqQhzzkX1+BAwduGMues3Vb4D/xDnSgUyotxIcwhGGxyGxmM/vp6dcEELX41gSwLvHEB7Bu8cQGsCnxxAWwafGQf8tuoE3apM3TUyIRiUjpNNOZzvTb202J8xZv8dbhoe3bvu1HJ/7tAMiADMjg+hrGMIbx7i5y5Mj39hhhhJHLy82Iu27U4iFLD0Jc5SpXz86C6uMDNNBAu7gIglg9gKSIrwwiIuLRETawgY3396DmnLrUpe7V1XfFsYpVrLbbYT+WsYxl36cylam8vx+3Z+RBJF08vWqD53me5728KFNlqkwdJziDn5yQCqmQysFBtpftZXs7O8pIGSmjx8ekL/Uf/wZzs9wsNzPNVCFVSBXCaSyTCYaR5+dgPFXVoH574xM+4ZNiMW7xkB9Pg47kSI7UbgdVqRSsiPl8IR5+8YSJrw2tptW02vEx9rGP/YeHuPe4QCAQCASCL/kEcmSD0bwmP5kAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDQtMjhUMTU6MTQ6MTQrMDg6MDD3z0UlAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTA0LTI4VDE1OjE0OjE0KzA4OjAwhpL9mQAAAEl0RVh0c3ZnOmJhc2UtdXJpAGZpbGU6Ly8vaG9tZS9hZG1pbi9pY29uLWZvbnQvdG1wL2ljb25fd3dtOXcxZm40dDgvZHVpZ291LnN2Z7tpgUEAAAAASUVORK5CYII="></image>
+            </view>
+        </block>
+        
+    </view>
+<!-- 列表list -->
+    <view class="recommand_list" wx:for="{{selectArray}}">
+            <view class="recommand_list_item">
+                <!-- 第一行 -->
+                <view class="firstRow">
+                    <block wx:if="{{item.state == 1}}">
+                        <view class="name">{{item.name}}</view>
+                        <view class="phone">{{item.phone}}</view>
+                        <view class="stateDesc">{{item.stateDesc}}</view>
+                    </block>
+                        
+                    <block wx:if="{{item.state == 2}}">
+                        <view class="name">{{item.name}}</view>
+                        <view class="phone">{{item.phone}}</view>
+                        <view class="stateDesc blue">{{item.stateDesc}}</view>
+                    </block>
+                    <block wx:if="{{item.state == 3}}">
+                        <view class="name">{{item.name}}</view>
+                        <view class="phone">{{item.phone}}</view>
+                        <view class="stateDesc red">{{item.stateDesc}}</view>
+                    </block>
+                    <block wx:if="{{item.state == 4}}">
+                        <view class="name light">{{item.name}}</view>
+                        <view class="phone light">{{item.phone}}</view>
+                        <view class="stateDesc light">{{item.stateDesc}}</view>
+                    </block>
+                    <!-- <block wx:else>
+                        <view class="name">{{item.name}}</view>
+                        <view class="phone">{{item.phone}}</view>
+                        <view class="stateDesc">{{item.stateDesc}}</view>
+                    </block> -->
+                </view>
+                <!-- 第二行 -->
+                <block wx:if="{{item.state == 4}}">
+                    <view class="secondRow light">{{item.carName}}</view>
+                </block>
+                 <block wx:else>
+                    <view class="secondRow">{{item.carName}}</view>
+                </block>
+                <!-- 第三行 -->
+                <view class="thirdRow"></view>
+                <!-- 第四行 -->
+                <view class="fourthRow">
+                        <block wx:if="{{item.state == 4}}">
+                            <view class="storeName light">{{item.storeName}}</view>
+                            <view class="time light">{{item.time}}</view>
+                        </block>
+                        <block wx:else>
+                            <view class="storeName">{{item.storeName}}</view>
+                            <view class="time">{{item.time}}</view>
+                        </block>
+                </view>
+            </view>
+    </view>
+</view>
+
