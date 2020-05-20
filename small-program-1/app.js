@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -12,6 +13,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -32,6 +34,8 @@ App({
         }
       }
     }),
+
+    // 
     wx.db = {};
     wx.db.url = (url) => {
       return `https://douban-api.uieee.com/${url}`;
@@ -44,13 +48,16 @@ App({
       wx.db.navBarHeight = 48;
     } else {
       wx.db.navBarHeight = 44;
-    }
-  },
+    };
+
+  };
+
   // 初始化toast
   initToast: function () {
     const toastTypeNormal = 0;
     const toastTypeSuccess = 1;
     const toastTypeError = 2;
+
     let commonToast = (title, type, duration = 1500) => {
       let options = {
         title: title,
@@ -64,7 +71,8 @@ App({
       }
       wx.showToast(options);
     };
-
+    
+    // 可以供外部调用的方法
     wx.db.toast = (title, duration) => {
       commonToast(title, toastTypeNormal, duration);
     };
@@ -74,8 +82,9 @@ App({
     wx.db.toastError = (title, duration) => {
       commonToast(title, toastTypeError, duration);
     };
-  },
+  };
+
   globalData: {
     userInfo: null
-  }
+  };
 })

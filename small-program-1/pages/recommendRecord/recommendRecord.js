@@ -1,37 +1,61 @@
 
 const TestArray = [
   {
-    state:1,
-    stateDesc:'跟进中',
-    name:'张1',
-    phone:'138****0000',
-    carName:'观致5S暗夜英雄版',
-    storeName:'深圳科技园宝能观致店1111111111111111111111111111',
-    time:'2020年4月27日 19:33:20'
+    "activityName": null,
+    "username": "改好test",
+    "sex": null,
+    "mobilePhone": "13696436666",
+    "provinceName": "河北省",
+    "cityName": "邢台市",
+    "dealerCode": "CN1078",
+    "dealerName": "邢台致祥汽车销售服务有限公司",
+    "intentionVehicleModel": "观致5s",
+    "createTime": "2020-04-27T17:39:42",
+    "status": 0,
+    "statusString": '跟进中',
+    "businessDate": null
   },{
-    state:2,
-    stateDesc:'已到店',
-    name:'张2',
-    phone:'138****0000',
-    carName:'观致5S暗夜英雄版',
-    storeName:'深圳科技园宝能观致店',
-    time:'2020年4月27日 19:33:20'
+    "activityName": null,
+    "username": "陈test",
+    "sex": null,
+    "mobilePhone": "13104999785",
+    "provinceName": "广东省",
+    "cityName": "深圳市",
+    "dealerCode": "CN1222",
+    "dealerName": "深圳宝能汽车销售服务有限公司",
+    "intentionVehicleModel": "观致5s暗黑英雄",
+    "createTime": "2020-04-27T17:30:49",
+    "status": 5,
+    "statusString": '已到店',
+    "businessDate": "2020-04-28T15:56:20"
   },{
-    state:3,
-    stateDesc:'已成交',
-    name:'张3',
-    phone:'138****0000',
-    carName:'观致5S暗夜英雄版',
-    storeName:'深圳科技园宝能观致店',
-    time:'2020年4月27日 19:33:20'
+    "activityName": null,
+    "username": "陈深圳市",
+    "sex": null,
+    "mobilePhone": "13104999785",
+    "provinceName": "广东省",
+    "cityName": "深圳市",
+    "dealerCode": "CN1222",
+    "dealerName": "深圳宝能汽车销售服务有限公司",
+    "intentionVehicleModel": "观致5s暗黑英雄",
+    "createTime": "2020-04-27T15:04:06",
+    "status": 10,
+    "statusString": '已成交',
+    "businessDate": null
   },{
-    state:4,
-    stateDesc:'已失效',
-    name:'张4',
-    phone:'138****0000',
-    carName:'观致5S暗夜英雄版',
-    storeName:'深圳科技园宝能观致店',
-    time:'2020年4月27日 19:33:20'
+    "activityName": null,
+    "username": "test刘",
+    "sex": null,
+    "mobilePhone": "15915105122",
+    "provinceName": "广东省",
+    "cityName": "深圳市",
+    "dealerCode": "CN1222",
+    "dealerName": "深圳宝能汽车销售服务有限公司",
+    "intentionVehicleModel": "观致5s暗黑英雄",
+    "createTime": "2020-04-27T15:01:10",
+    "status": 15,
+    "statusString": '已失效',
+    "businessDate": 'afdsl'
   }
 ];
 
@@ -74,7 +98,7 @@ Page({
     wx.request({
       url: 'https://microsales.qorosauto.com/workplace/activity/testDrive',
       data: {
-        mobile: tel
+        openId: wx.getStorageSync('openid'),
       },
       header: {
         'content-type': 'application/json'
@@ -82,7 +106,7 @@ Page({
       method: 'POST',
       success(res) {
         console.log(res)
-        let data = Array.from(new Set(res.data.rows))
+        let data = Array.from(new Set(res.data.records))
         that.setData({
           listArray: data,
           selectArray:data

@@ -21,51 +21,47 @@
             <view class="recommand_list_item">
                 <!-- 第一行 -->
                 <view class="firstRow">
-                    <block wx:if="{{item.state == 1}}">
-                        <view class="name">{{item.name}}</view>
-                        <view class="phone">{{item.phone}}</view>
-                        <view class="stateDesc">{{item.stateDesc}}</view>
+                    <block wx:if="{{item.status == 0}}">
+                        <view class="name">{{item.username}}</view>
+                        <view class="phone">{{item.mobilePhone}}</view>
+                        <view class="stateDesc">{{item.statusString}}</view>
                     </block>
                         
-                    <block wx:if="{{item.state == 2}}">
-                        <view class="name">{{item.name}}</view>
-                        <view class="phone">{{item.phone}}</view>
-                        <view class="stateDesc blue">{{item.stateDesc}}</view>
+                    <block wx:if="{{item.status == 5}}">
+                        <view class="name">{{item.username}}</view>
+                        <view class="phone">{{item.mobilePhone}}</view>
+                        <view class="stateDesc blue">{{item.statusString}}</view>
                     </block>
-                    <block wx:if="{{item.state == 3}}">
-                        <view class="name">{{item.name}}</view>
-                        <view class="phone">{{item.phone}}</view>
-                        <view class="stateDesc red">{{item.stateDesc}}</view>
+                    <block wx:if="{{item.status == 10}}">
+                        <view class="name">{{item.username}}</view>
+                        <view class="phone">{{item.mobilePhone}}</view>
+                        <view class="stateDesc red">{{item.statusString}}</view>
                     </block>
-                    <block wx:if="{{item.state == 4}}">
-                        <view class="name light">{{item.name}}</view>
-                        <view class="phone light">{{item.phone}}</view>
-                        <view class="stateDesc light">{{item.stateDesc}}</view>
+                    <block wx:if="{{item.status == 15}}">
+                        <view class="name light">{{item.username}}</view>
+                        <view class="phone light">{{item.mobilePhone}}</view>
+                        <view class="stateDesc light">{{item.statusString}}</view>
                     </block>
-                    <!-- <block wx:else>
-                        <view class="name">{{item.name}}</view>
-                        <view class="phone">{{item.phone}}</view>
-                        <view class="stateDesc">{{item.stateDesc}}</view>
-                    </block> -->
+                   
                 </view>
                 <!-- 第二行 -->
-                <block wx:if="{{item.state == 4}}">
-                    <view class="secondRow light">{{item.carName}}</view>
+                <block wx:if="{{item.status == 15}}">
+                    <view class="secondRow light">{{item.intentionVehicleModel}}</view>
                 </block>
                  <block wx:else>
-                    <view class="secondRow">{{item.carName}}</view>
+                    <view class="secondRow">{{item.intentionVehicleModel}}</view>
                 </block>
                 <!-- 第三行 -->
                 <view class="thirdRow"></view>
                 <!-- 第四行 -->
                 <view class="fourthRow">
-                        <block wx:if="{{item.state == 4}}">
-                            <view class="storeName light">{{item.storeName}}</view>
-                            <view class="time light">{{item.time}}</view>
+                        <block wx:if="{{item.status == 15}}">
+                            <view class="storeName light">{{item.dealerName}}</view>
+                            <view class="time light">{{(item.businessDate== null)?item.createTime:item.businessDate}}</view>
                         </block>
                         <block wx:else>
-                            <view class="storeName">{{item.storeName}}</view>
-                            <view class="time">{{item.time}}</view>
+                            <view class="storeName">{{item.dealerName}}</view>
+                            <view class="time">{{(item.businessDate== null)?item.createTime:item.businessDate}}</view>
                         </block>
                 </view>
             </view>
