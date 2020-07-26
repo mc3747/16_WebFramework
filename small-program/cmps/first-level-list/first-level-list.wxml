@@ -1,0 +1,8 @@
+
+<view class="first-level-list">
+    <image class="image" src="{{image}}" mode="widthFix"></image>
+    <view class="right">
+        <text class="title">{{title}}</text>
+        <text class="desc">{{desc}}</text>
+    </view>
+</view>
