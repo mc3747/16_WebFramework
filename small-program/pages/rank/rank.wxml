@@ -1,0 +1,6 @@
+<!--pages/rank/rank.wxml-->
+<nav-bar title="榜单"
+  back="false"
+  home="false"></nav-bar>
+<text>pages/rank/rank.wxml</text>
+<image src="https://horse-markdown-pics.oss-cn-shenzhen.aliyuncs.com/img/图片1.png" alt="" />

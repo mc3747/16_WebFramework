@@ -1,3 +1,0 @@
-<!--pages/agreement/agreement.wxml-->
-<!-- <text>pages/agreement/agreement.wxml</text> -->
-<web-view src="https://m.gjfax.com/html/agreement.html?from=app" bindmessage=""></web-view>
