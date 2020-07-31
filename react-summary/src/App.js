@@ -161,7 +161,6 @@ class App extends React.Component {
                 <a style={{ display: 'block', marginBottom: 40, color: '#108ee9' }}
                     onClick={(e) => {
                         e.preventDefault();
-
                         this.props.history.push(pageText.toLowerCase());
                     }}
                 >
