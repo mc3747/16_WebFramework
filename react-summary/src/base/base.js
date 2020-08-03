@@ -7,8 +7,13 @@ import ClassEffect from './hooks/useEffect/classEffect'
 import HooksUseState from './hooks/useEffect/hooksUseState'
 import ClassContext from './hooks/useContext/classContext'
 import HooksUseContext from './hooks/useContext/hooksUseContext'
-
 import HooksUseReducer from './hooks/useReducer/hooksUseReducer'
+import HooksUseCallback from './hooks/useCallback/hooksUseCallback'
+import ClassUseCallback from './hooks/useCallback/classUseCallback'
+import HooksUseMemo from './hooks/useMemo/hooksUseMemo'
+import HooksUseRef from './hooks/useRef/hooksUseRef'
+import HooksUseImperativeHandle from './hooks/useImperativeHandle/hooksUseImperativeHandle'
+import HooksUseLayoutEffect from './hooks/useLayoutEffect/hooksUseLayoutEffect'
 import { Link } from 'react-router-dom';
 
 export default class Base extends React.Component {
@@ -26,7 +31,12 @@ export default class Base extends React.Component {
                 <ClassContext />
                 <HooksUseContext />
                 <HooksUseReducer />
-                
+                <ClassUseCallback />
+                <HooksUseCallback />
+                <HooksUseMemo />
+                <HooksUseRef />
+                <HooksUseImperativeHandle></HooksUseImperativeHandle>
+                <HooksUseLayoutEffect></HooksUseLayoutEffect>
                  <Link to="/HooksListVC" style={{color:'black'}}>
                     <div>点击跳转到Page3</div></Link>
 
