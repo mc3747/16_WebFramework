@@ -35,6 +35,7 @@ import PackageSectionListVC from './package/packageList/packageSectionListVC';
 import PackageNormalListVC from './package/packageList/packageNormalListVC';
 import createBrowserHistory from "history/createBrowserHistory";
 import HooksListVC from './base/baseList/hooksList';
+import HooksInputVC from './base/baseInput/hooksInput';
 
 const history = createBrowserHistory();
 let styles = {
@@ -102,6 +103,7 @@ class Routers extends Component {
                     <Route path="/packageSectionListVC" exact component={PackageSectionListVC} key='package1' />
                     <Route path="/packageNormalListVC" exact component={PackageNormalListVC} key='package2' />
                     <Route path="/hooksListVC" exact component={HooksListVC} key='hooksListVC'/>
+                    <Route path="/hooksInputVC" exact component={HooksInputVC} key='hooksInputVC'/>
 
                     <Route path="/package" exact component={Package} key='package' />
                     <Route path="/base" exact component={Base} key='base' />

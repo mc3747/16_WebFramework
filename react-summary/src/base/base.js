@@ -14,6 +14,8 @@ import HooksUseMemo from './hooks/useMemo/hooksUseMemo'
 import HooksUseRef from './hooks/useRef/hooksUseRef'
 import HooksUseImperativeHandle from './hooks/useImperativeHandle/hooksUseImperativeHandle'
 import HooksUseLayoutEffect from './hooks/useLayoutEffect/hooksUseLayoutEffect'
+import HooksInput from './baseInput/hooksInput'
+import ModalDemo from './baseModal/demo'
 import { Link } from 'react-router-dom';
 
 export default class Base extends React.Component {
@@ -39,7 +41,8 @@ export default class Base extends React.Component {
                 <HooksUseLayoutEffect></HooksUseLayoutEffect>
                  <Link to="/HooksListVC" style={{color:'black'}}>
                     <div>点击跳转到Page3</div></Link>
-
+                <HooksInput></HooksInput>
+                <ModalDemo></ModalDemo>
                  {/* <button onClick={()=>{this.props.history.push('/src/base/hooks/hooksList')}}>跳转到hooks的list</button> */}
             </div>
         )

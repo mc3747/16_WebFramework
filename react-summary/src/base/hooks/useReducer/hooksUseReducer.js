@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer,useContext } from "react";
 // 例子1
 const initialState1 = 0;
 const reducer1 = (state, action) => {
@@ -67,8 +67,8 @@ const Example03 = () => {
     <>
       <div>
         {count1}
-        <button onClick={() => dispatch1({ type: 'increment' })}>+1</button>
-        <button onClick={() => dispatch1({ type: 'decrement' })}>-1</button>
+        <button onClick={() => dispatch1({ type: 'increment' })}>例子3:+1</button>
+        <button onClick={() => dispatch1({ type: 'decrement' })}>例子3:-1</button>
         <button onClick={() => dispatch1({ type: 'set', count: 0 })}>reset</button>
       </div>
       <div>
@@ -105,6 +105,59 @@ const TextInput = ({ value, onChangeText }) => (
 );
 
 // 例子5:全局共享context
+const initialState5 = 0;
+const reducer5 = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "set":
+      return action.count;
+    default:
+      throw new Error("Unexpected action");
+  }
+};
+const CountContext = React.createContext();
+
+const CountProvider = ({ children }) => {
+  const contextValue = useReducer(reducer5, initialState5);
+  return (
+    <CountContext.Provider value={contextValue}>
+      {children}
+    </CountContext.Provider>
+  );
+};
+
+const useCount = () => {
+  const contextValue = useContext(CountContext);
+  return contextValue;
+};
+const Counter = () => {
+  const [count, dispatch] = useCount();
+  return (
+    <div>
+      {count}
+      <button onClick={() => dispatch({ type: 'increment' })}>例子5:+1</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>例子5:-1</button>
+      <button onClick={() => dispatch({ type: 'set', count: 0 })}>reset</button>
+    </div>
+  );
+};
+const Example05 = () => (
+  <>
+    <CountProvider>
+      <Counter />
+      <Counter />
+    </CountProvider>
+    <CountProvider>
+      <Counter />
+      <Counter />
+    </CountProvider>
+  </>
+);
+
+
 
 const HooksUseReducer =()=>{
   return(
@@ -113,6 +166,7 @@ const HooksUseReducer =()=>{
     <Example02></Example02>
     <Example03></Example03>
     <Example04></Example04>
+    <Example05></Example05>
     </>
   )
 }
