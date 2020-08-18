@@ -246,6 +246,27 @@ function getMaxParallels(data) {
     return maxParallelNum;
 };
 
+// 当前日期天数
+const dayOfYear = date =>
+  Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+dayOfYear(new Date()); // 285
+
+// 返回当前24小时制时间的字符串
+const getColonTimeFromDate = date => date.toTimeString().slice(0, 8);
+getColonTimeFromDate(new Date()); // "08:38:00"
+
+// 返回日期间的天数
+const getDaysDiffBetweenDates = (dateInitial, dateFinal) =>
+  (dateFinal - dateInitial) / (1000 * 3600 * 24);
+getDaysDiffBetweenDates(new Date('2019-01-01'), new Date('2019-10-14')); // 286
+
+// 检查是否在某日期后
+const isAfterDate = (dateA, dateB) => dateA > dateB;
+isAfterDate(new Date(2010, 10, 21), new Date(2010, 10, 20)); // true
+// 检查是否在某日期前
+const isBeforeDate = (dateA, dateB) => dateA < dateB;
+isBeforeDate(new Date(2010, 10, 20), new Date(2010, 10, 21)); // true
+
 module.exports = {
     counter,
     getDateByDay,

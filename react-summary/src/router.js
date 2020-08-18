@@ -20,22 +20,7 @@ import Summary from './summary/summary';
 import Tool from './tool/tool';
 import Base from './base/base';
 
-import SelfDefinedComponent from './practices/1_selfDefinedComponent';
-import Props from './practices/2_props';
-import States from './practices/3_states';
-import JumpAnimate from './practices/4_jumpAnimate';
-import AnimateSummary from './practices/animation/index';
-import JumpEvent from './practices/5_jumpEvent';
-import JumpRender from './practices/6_jumpRender';
-import JumpList from './practices/7_jumpList';
-import FreshControl from './practices/8_freshControl';
-import FreshAndMore from "./practices/9_freshAndMore";
-
-import PackageSectionListVC from './package/packageList/packageSectionListVC';
-import PackageNormalListVC from './package/packageList/packageNormalListVC';
 import createBrowserHistory from "history/createBrowserHistory";
-import HooksListVC from './base/baseList/hooksList';
-import HooksInputVC from './base/baseInput/hooksInput';
 
 const history = createBrowserHistory();
 let styles = {
@@ -90,20 +75,7 @@ class Routers extends Component {
 
                 <QueueAnim >
                     <Route path="/" exact component={App} key='demo1' />
-                    <Route path="/selfDefinedComponent" exact component={SelfDefinedComponent} key='demo2' />
-                    <Route path="/props" exact component={Props} key='demo3' />
-                    <Route path="/states" exact component={States} key='demo4' />
-                    <Route path="/jumpAnimate" exact component={JumpAnimate} key='demo5' />
-                    <Route path="/animateSummary" exact component={AnimateSummary} key='demo5-1' />
-                    <Route path="/jumpEvent" exact component={JumpEvent} key='demo6' />
-                    <Route path="/jumpRender" exact component={JumpRender} key='demo7' />
-                    <Route path="/jumpList" exact component={JumpList} key='demo8' />
-                    <Route path="/freshControl" exact component={FreshControl} key='demo9' />
-                    <Route path="/freshAndMore" exact component={FreshAndMore} key='demo10' />
-                    <Route path="/packageSectionListVC" exact component={PackageSectionListVC} key='package1' />
-                    <Route path="/packageNormalListVC" exact component={PackageNormalListVC} key='package2' />
-                    <Route path="/hooksListVC" exact component={HooksListVC} key='hooksListVC'/>
-                    <Route path="/hooksInputVC" exact component={HooksInputVC} key='hooksInputVC'/>
+             
 
                     <Route path="/package" exact component={Package} key='package' />
                     <Route path="/base" exact component={Base} key='base' />
