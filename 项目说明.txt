@@ -1,0 +1,30 @@
+1，react-summary：以前的react项目
+2，small-program：自己准备着手的小程序项目
+3，react-new-summary
+	1，使用create-react-app来构建项目
+		方法1：npx
+			npx create-react-app my-app
+		方法2：npm
+			npm init react-app my-app
+			npm init <initializer> is available in npm 6+
+
+		方法3：Yarn
+			yarn create react-app my-app
+	2，启动项目
+		方法1：npm start 
+		方法2：yarn start
+	3，使用Fragment去掉组件外层标签
+	4， webpack 相关的配置的目录，在读了 react 官方文档后，发现通过 yarn eject 可以弹出相关的配置，进行自定义配置，但不可逆
+	5，支持Sass，less，stylus
+		先运行npm run eject
+		再分步安装
+	6，编译组件
+		babel
+	7，打包组件
+		webpack
+	8，路由
+		路由安装
+		路由配置
+		路由跳转
+	9,组件引用
+		

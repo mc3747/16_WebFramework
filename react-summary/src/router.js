@@ -20,6 +20,8 @@ import Summary from './summary/summary';
 import Tool from './tool/tool';
 import Base from './base/base';
 
+import UseCallBackDemo from './summary/hooksSummary/hooks/useCallback/classUseCallback';
+
 import createBrowserHistory from "history/createBrowserHistory";
 
 const history = createBrowserHistory();
@@ -74,13 +76,16 @@ class Routers extends Component {
             <AnimatedRouter> */}
 
                 <QueueAnim >
+
                     <Route path="/" exact component={App} key='demo1' />
-             
 
                     <Route path="/package" exact component={Package} key='package' />
                     <Route path="/base" exact component={Base} key='base' />
                     <Route path="/tool" exact component={Tool} key='tool' />
                     <Route path="/summary" exact component={Summary} key='summary' />
+                    
+                    <Route path="/useCallBackDemo" exact component={UseCallBackDemo} key='useCallBackDemo' />
+
                 </QueueAnim>
                 {/* </AnimatedRouter>      
             </Switch> */}
