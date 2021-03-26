@@ -1,6 +1,6 @@
-1，react-summary：以前的react项目
-2，small-program：自己准备着手的小程序项目
-3，react-new-summary
+🌈1，react-summary：以前的react项目
+🌈2，small-program：自己准备着手的小程序项目
+🌈3，react-new-summary：参考https://zhuanlan.zhihu.com/p/104831343和https://juejin.cn/post/6844904081840930829
 	1，使用create-react-app来构建项目
 		方法1：npx
 			npx create-react-app my-app
@@ -24,7 +24,37 @@
 		webpack
 	8，路由
 		路由安装
+			npm install react-router-dom --save
 		路由配置
+			在根目录app.js中配置import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 		路由跳转
-	9,组件引用
+			 this.props.history.push('/home')
+		路由传参
+
+	9,组件
+		组件引用
+		组件传参		
+	
+	10,按钮事件的绑定
+		  <button onClick={this.gotoHome.bind(this)}>跳转Home页</button>
+		  或者<button onClick={()=>{this.gotoHome()}}>跳转Home页</button>
+	11,打包：yarn build
+		自动会在根目录生成build文件夹
+		打包后的html为空的可能原因：
+			1，要在package.json中设置homepage值为‘.’
+			2，react-router必须使用HashRouter
+
+	11，react hooks
+		
+	11，ant design	
+	11，redux和redux-immutable
+	11，Axios - Ajax请求工具
+	11，Mock.js
+	11，本地跨域：setupProxy
+	11，node.js和Express
+	11，热更新
+	11，设置环境变量
+	11，代码检查：Eslint
+
+
 		

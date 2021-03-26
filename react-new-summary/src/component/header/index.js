@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
             <div className="M-header">
-                Header
+                {this.props.param}Header
             </div>
         )
     }
