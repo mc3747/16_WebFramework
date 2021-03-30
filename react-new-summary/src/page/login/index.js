@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from '../../component/header'
 import '../../common/css/word.css'
 
-class Home extends Component {
+class Login extends Component {
     render() {
         return (
             <div className="Word-header">
@@ -17,4 +17,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default Login
