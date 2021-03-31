@@ -31,6 +31,11 @@ import JumpProps from './page/classes/7_jumpPassValue/Props'
 import JumpRedux from './page/classes/7_jumpPassValue/Redux'
 import JumpContext from './page/classes/7_jumpPassValue/Context'
 import JumpEventemit from './page/classes/7_jumpPassValue/Eventemit'
+//h5和app相关
+import H5AndApp from './page/h5AndApp'
+import CallAppLib from './page/h5AndApp/callAppLib'
+import WebLaunchApp from './page/h5AndApp/webLaunchApp'
+
 function App() {
   return (
     <HashRouter>
@@ -63,11 +68,14 @@ function App() {
         <Route path="/jumpTarget1/:data" component={JumpTarget1} />
         <Route path="/jumpTarget2" component={JumpTarget2} />
         <Route path="/jumpTarget3" component={JumpTarget3} />
-
         <Route path="/jumpProps" component={JumpProps} />
         <Route path="/jumpRedux" component={JumpRedux} />
         <Route path="/jumpContext" component={JumpContext} />
         <Route path="/jumpEventemit" component={JumpEventemit} />
+{/* h5和app相关验证 */}
+        <Route path="/h5AndApp" component={H5AndApp} />
+        <Route path="/callAppLib" component={CallAppLib} />
+        <Route path="/webLaunchApp" component={WebLaunchApp} />
 
 {/* 根路径 */}
         <Route exact path="/" component={Home} />

@@ -3055,6 +3055,11 @@ call-bind@^1.0.0, call-bind@^1.0.2:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
 
+callapp-lib@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/callapp-lib/-/callapp-lib-3.4.0.tgz#9b84eef539b6eee80d8ce9f9b55b076f1bdc37e4"
+  integrity sha512-JAYNhRKuKhYq5+1+CLiCorZp4+uFc7k12VkVk0+mj+kyOyHXXlM0+SaBybsi/q/nOyZkeKLqbmrZSouqRjcSIQ==
+
 caller-callsite@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/caller-callsite/-/caller-callsite-2.0.0.tgz"
@@ -11066,6 +11071,11 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
+
+web-launch-app@^2.2.8:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/web-launch-app/-/web-launch-app-2.2.8.tgz#86ac5f51f2ea8641f52995ba6a0d94792bf7b0ef"
+  integrity sha512-iuFhFi5l0Qlp/42+0pkjm9IVMdaP55kTpB9U9+xDM0t+0u29/nx0iRK4uSOh+aHc5fuQ/janNLoPN/SFb2BaYQ==
 
 web-vitals@^1.0.1:
   version "1.1.1"

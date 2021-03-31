@@ -13,6 +13,7 @@ class Home extends Component {
                 <button onClick={this.gotoHome1.bind(this,'/classes')}>2-跳转到classes示例</button>
                 <button onClick={e=>this.gotoHome2(e,'/welcome')}>3-跳转redux示例</button>
                 <button onClick={e=>this.gotoHome2(e,'/welcome')}>4-跳转ant design示例</button>
+                <button onClick={e=>this.gotoHome2(e,'/h5AndApp')}>5-跳转h5和app相关示例</button>
             </div>
         )
     }
