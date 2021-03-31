@@ -15,8 +15,8 @@ class Classes extends Component {
                 <button onClick={()=>this.gotoHome('/states')}>3-跳转到states</button>
                 <button onClick={()=>this.gotoHome('/render')}>4-跳转到render</button>
                 <button onClick={()=>this.gotoHome('/event')}>5-跳转到event</button>
-                <button onClick={()=>this.gotoHome('/passValue')}>6-跳转到passValue</button>
-                {/* <button onClick={()=>this.gotoHome('/useContext')}>7-跳转到useContext</button> */}
+                <button onClick={()=>this.gotoHome('/componentPassValue')}>6-跳转到组件传值</button>
+                <button onClick={()=>this.gotoHome('/jumpPassValue')}>7-跳转到页面传值</button>
             </div>
         )
     }
