@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 /*
 
-
+组件传值
 */ 
 
 

@@ -19,10 +19,10 @@ import Props from './page/classes/2_props'
 import States from './page/classes/3_states'
 import Render from './page/classes/4_render'
 import Event from './page/classes/5_event'
-import PassValue from './page/classes/6_passValue/'
-import FatherToSon from './page/classes/6_passValue/fatherToSon/father'
-import SonToFather from './page/classes/6_passValue/sonToFather/father'
-import BrotherToBrother from './page/classes/6_passValue/brotherToBrother/brother1'
+import PassValue from './page/classes/6_componentPassValue'
+import FatherToSon from './page/classes/6_componentPassValue/fatherToSon/father'
+import SonToFather from './page/classes/6_componentPassValue/sonToFather/father'
+import BrotherToBrother from './page/classes/6_componentPassValue/brotherToBrother/brother1'
 
 function App() {
   return (
