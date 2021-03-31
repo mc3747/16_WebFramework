@@ -9,8 +9,8 @@ class Home extends Component {
                 <Header param="home的"/>
                 <h1>Home page</h1>
                 {/* 🌈：按钮点击传参的三种方式 */}
-                <button onClick={()=>this.gotoHome1('/hooks')}>跳转到hooks示例</button>
-                <button onClick={this.gotoHome1.bind(this,'/welcome')}>跳转Home页2</button>
+                <button onClick={()=>this.gotoHome1('/hooks')}>1-跳转到hooks示例</button>
+                <button onClick={this.gotoHome1.bind(this,'/classes')}>2-跳转到classes示例</button>
                 <button onClick={e=>this.gotoHome2(e,'/welcome')}>跳转Home页3</button>
             </div>
         )
