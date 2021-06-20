@@ -38,7 +38,7 @@ const option1 = {
     },
     // iOS的Universal Link
     universal: {
-        host: 'h5sales.qorosauto.com/cert/',
+        host: 'bmssales.baonengmotor.com/cert/',
         pathKey: 'path=vehicel&id=19999',
     },
     // APP 的 App Store 地址
