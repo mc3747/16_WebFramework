@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 /*
-
 组件传值
 */ 
 export default class PassValue extends Component {

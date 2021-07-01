@@ -35,55 +35,74 @@ import JumpEventemit from './page/classes/7_jumpPassValue/Eventemit'
 import H5AndApp from './page/h5AndApp'
 import CallAppLib from './page/h5AndApp/callAppLib'
 import WebLaunchApp from './page/h5AndApp/webLaunchApp'
+//跨域相关
+import CrossDomain from "./page/crossDomain"
+//网络相关
+import NetworkRequest from "./page/networkRequest"
+import CentralDemo from "./page/networkRequest/hooksDemo/CentralDemo"
+import InlineDemo from "./page/networkRequest/hooksDemo/InlineDemo"
+import HookDemo from "./page/networkRequest/hooksDemo/HookDemo"
+import ReactQueryDemo from "./page/networkRequest/hooksDemo/ReactQueryDemo"
+//数据持久化相关
+import DataPersistence from "./page/dataPersistence"
 
 function App() {
-  return (
-    <HashRouter>
-      <Switch>
-{/* 子目录 */}
-        <Route path="/login" component={Login} />
-        <Route path="/home" component={Home} />
-        <Route path="/welcome" component={Welcome} />
-{/* hooks */}
-        <Route path="/hooks" component={Hooks} />
-        <Route path="/useState" component={UseState} />
-        <Route path="/useEffect" component={UseEffect} />
-        <Route path="/useRef" component={UseRef} />
-        <Route path="/useMemo" component={UseMemo} />
-        <Route path="/useCallback" component={UseCallback} />
-        <Route path="/useReducer" component={UseReducer} />
-        <Route path="/useContext" component={UseContext} />
-{/* classes */}
-        <Route path="/classes" component={Classes} />
-        <Route path="/selfDefinedComponent" component={SelfDefinedComponent} />
-        <Route path="/props" component={Props} />
-        <Route path="/states" component={States} />
-        <Route path="/render" component={Render} />
-        <Route path="/event" component={Event} />
-        <Route path="/componentPassValue" component={PassValue} />
-        <Route path="/fatherToSon" component={FatherToSon} />
-        <Route path="/sonToFather" component={SonToFather} />
-        <Route path="/brotherToBrother" component={BrotherToBrother} />
-        <Route path="/jumpPassValue" component={JumpPassValue} />
-        <Route path="/jumpTarget1/:data" component={JumpTarget1} />
-        <Route path="/jumpTarget2" component={JumpTarget2} />
-        <Route path="/jumpTarget3" component={JumpTarget3} />
-        <Route path="/jumpProps" component={JumpProps} />
-        <Route path="/jumpRedux" component={JumpRedux} />
-        <Route path="/jumpContext" component={JumpContext} />
-        <Route path="/jumpEventemit" component={JumpEventemit} />
-{/* h5和app相关验证 */}
-        <Route path="/h5AndApp" component={H5AndApp} />
-        <Route path="/callAppLib" component={CallAppLib} />
-        <Route path="/webLaunchApp" component={WebLaunchApp} />
-
-{/* 根路径 */}
-        <Route exact path="/" component={Home} />
-{/* 路径错误，重定向 */}
-        <Redirect to={"/home"} />
-      </Switch>
-    </HashRouter>
-  );
+        return (
+                <HashRouter>
+                        <Switch>
+                                {/* 子目录 */}
+                                <Route path="/login" component={Login} />
+                                <Route path="/home" component={Home} />
+                                <Route path="/welcome" component={Welcome} />
+                                {/* hooks */}
+                                <Route path="/hooks" component={Hooks} />
+                                <Route path="/useState" component={UseState} />
+                                <Route path="/useEffect" component={UseEffect} />
+                                <Route path="/useRef" component={UseRef} />
+                                <Route path="/useMemo" component={UseMemo} />
+                                <Route path="/useCallback" component={UseCallback} />
+                                <Route path="/useReducer" component={UseReducer} />
+                                <Route path="/useContext" component={UseContext} />
+                                {/* classes */}
+                                <Route path="/classes" component={Classes} />
+                                <Route path="/selfDefinedComponent" component={SelfDefinedComponent} />
+                                <Route path="/props" component={Props} />
+                                <Route path="/states" component={States} />
+                                <Route path="/render" component={Render} />
+                                <Route path="/event" component={Event} />
+                                <Route path="/componentPassValue" component={PassValue} />
+                                <Route path="/fatherToSon" component={FatherToSon} />
+                                <Route path="/sonToFather" component={SonToFather} />
+                                <Route path="/brotherToBrother" component={BrotherToBrother} />
+                                <Route path="/jumpPassValue" component={JumpPassValue} />
+                                <Route path="/jumpTarget1/:data" component={JumpTarget1} />
+                                <Route path="/jumpTarget2" component={JumpTarget2} />
+                                <Route path="/jumpTarget3" component={JumpTarget3} />
+                                <Route path="/jumpProps" component={JumpProps} />
+                                <Route path="/jumpRedux" component={JumpRedux} />
+                                <Route path="/jumpContext" component={JumpContext} />
+                                <Route path="/jumpEventemit" component={JumpEventemit} />
+                                {/* h5和app相关验证 */}
+                                <Route path="/h5AndApp" component={H5AndApp} />
+                                <Route path="/callAppLib" component={CallAppLib} />
+                                <Route path="/webLaunchApp" component={WebLaunchApp} />
+                                {/* 跨域相关 */}
+                                <Route path="/crossDomain" component={CrossDomain} />
+                                {/* 网路相关 */}
+                                <Route path="/networkRequest" component={NetworkRequest} />
+                                <Route path="/centralDemo" component={CentralDemo} />
+                                <Route path="/inlineDemo" component={InlineDemo} />
+                                <Route path="/hookDemo" component={HookDemo} />
+                                <Route path="/reactQueryDemo" component={ReactQueryDemo} />
+                                {/* 持久化相关 */}
+                                <Route path="/dataPersistence" component={DataPersistence} />
+                                {/* 根路径 */}
+                                <Route exact path="/" component={Home} />
+                                {/* 路径错误，重定向 */}
+                                <Redirect to={"/home"} />
+                        </Switch>
+                </HashRouter>
+        );
 }
 
 export default App;
