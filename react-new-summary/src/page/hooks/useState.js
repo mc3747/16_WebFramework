@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 /*
-effect：状态
+state：状态
 */ 
 export default function UseState() {
   const [obj, setObject] = useState({
@@ -9,7 +9,7 @@ export default function UseState() {
   });
   return (
     <div className="App">
-      Count: {obj.count}
+      <h1>Count: {obj.count}</h1>
       <button onClick={() => setObject({ ...obj, count: obj.count + 1 })}>+</button>
       <button onClick={() => setObject({ ...obj, count: obj.count - 1 })}>-</button>
     </div>
