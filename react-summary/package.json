@@ -21,7 +21,7 @@
         "react-pullload": "^1.2.0",
         "react-router": "^4.3.1",
         "react-router-dom": "^4.3.1",
-        "react-scripts": "2.1.1",
+        "react-scripts": "2.1.8",
         "react-touch-loader": "^1.1.4",
         "react-transition-group": "^2.5.2",
         "styled-components": "^5.1.1"
